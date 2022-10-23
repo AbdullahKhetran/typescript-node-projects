@@ -2,7 +2,7 @@
   "dependencies": {
     "inquirer": "^9.1.4"
   },
-  "name": "00_calculator",
+  "name": "01_number_guessing_game",
   "type": "module",
   "version": "1.0.0",
   "main": "index.mjs",
