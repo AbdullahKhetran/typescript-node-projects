@@ -32,7 +32,6 @@ let questions = [
 inquirer
     .prompt(questions)
     .then((answers) => {
-    // Use user feedback for... whatever!!
     const num1 = parseFloat(answers.num1);
     const num2 = parseFloat(answers.num2);
     const task = answers.task;

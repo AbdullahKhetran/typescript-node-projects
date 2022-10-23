@@ -37,7 +37,6 @@ let questions: object[] = [
 inquirer
     .prompt(questions)
     .then((answers: any) => {
-        // Use user feedback for... whatever!!
         const num1: number = parseFloat(answers.num1);
         const num2: number = parseFloat(answers.num2);
         const task: string = answers.task;
