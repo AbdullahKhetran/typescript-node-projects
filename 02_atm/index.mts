@@ -1,10 +1,10 @@
 import inquirer from 'inquirer';
 
 let userID: number = Math.floor((Math.random() * 100) + 1);
-console.log(userID);
+// console.log(userID);
 
 let userPin: number = Math.floor((Math.random() * 1000) + 1);
-console.log(userPin);
+// console.log(userPin);
 
 inquirer
     .prompt([
