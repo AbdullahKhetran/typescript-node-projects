@@ -1,10 +1,14 @@
 import inquirer from 'inquirer';
 
-let userID: number = Math.floor((Math.random() * 100) + 1);
-// console.log(userID);
+let userID: number = Math.floor((Math.random() * 9000) + 1000);
+// 4 digit user id but it can't start with 0
+console.log(userID);
 
-let userPin: number = Math.floor((Math.random() * 1000) + 1);
-// console.log(userPin);
+let userPin: number = Math.floor((Math.random() * 9000) + 1000);
+console.log(userPin);
+
+const rExp: RegExp = /(^\d{4}$)/
+// making sure user dosen't pass 00xxxx instead of xxxx
 
 inquirer
     .prompt([
@@ -15,8 +19,10 @@ inquirer
             validate: (answer) => {
                 if (isNaN(answer)) {
                     return "Please enter a valid number"
+                } else if (rExp.test(answer) != true) {
+                    return "ID e1"
                 } else if (answer != userID) {
-                    return "Invalid User ID"
+                    return "ID e2"
                 }
                 return true
             }
@@ -28,8 +34,10 @@ inquirer
             validate: (answer) => {
                 if (isNaN(answer)) {
                     return "Please enter a valid number"
+                } else if (rExp.test(answer) != true) {
+                    return "PIN e1"
                 } else if (answer != userPin) {
-                    return "Invalid PIN"
+                    return "PIN e2"
                 }
                 return true
             }

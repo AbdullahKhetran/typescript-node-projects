@@ -1,6 +1,9 @@
 import inquirer from 'inquirer';
-let userID = Math.floor((Math.random() * 100) + 1);
-let userPin = Math.floor((Math.random() * 1000) + 1);
+let userID = Math.floor((Math.random() * 9000) + 1000);
+console.log(userID);
+let userPin = Math.floor((Math.random() * 9000) + 1000);
+console.log(userPin);
+const rExp = /(^\d{4}$)/;
 inquirer
     .prompt([
     {
@@ -11,8 +14,11 @@ inquirer
             if (isNaN(answer)) {
                 return "Please enter a valid number";
             }
+            else if (rExp.test(answer) != true) {
+                return "ID e1";
+            }
             else if (answer != userID) {
-                return "Invalid User ID";
+                return "ID e2";
             }
             return true;
         }
@@ -25,8 +31,11 @@ inquirer
             if (isNaN(answer)) {
                 return "Please enter a valid number";
             }
+            else if (rExp.test(answer) != true) {
+                return "PIN e1";
+            }
             else if (answer != userPin) {
-                return "Invalid PIN";
+                return "PIN e2";
             }
             return true;
         }
