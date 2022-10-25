@@ -5,8 +5,14 @@ inquirer
         type: "input",
         name: "enter_task",
         message: "Enter a new task",
-    },
+        validate: (answer) => {
+            if (answer == "") {
+                return "Please enter something";
+            }
+            return true;
+        }
+    }
 ])
-    .then((answers) => {
+    .then(() => {
     console.log("task saved");
 });
