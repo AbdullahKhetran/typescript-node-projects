@@ -1,9 +1,11 @@
 import inquirer from 'inquirer';
 
+// using regex to know number of words
 function wordCount(text: string) {
     return text.split(/\S+/).length - 1;
 };
 
+// remove whitespaces to count characters
 function charCount(text: string) {
     return text.trim().length
 }
