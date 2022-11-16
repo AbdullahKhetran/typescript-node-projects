@@ -15,10 +15,10 @@ inquirer
                 return "Please enter a valid number";
             }
             else if (rExp.test(answer) != true) {
-                return "ID e1";
+                return "Invalid ID";
             }
             else if (answer != userID) {
-                return "ID e2";
+                return "Invalid ID";
             }
             return true;
         }
@@ -32,10 +32,10 @@ inquirer
                 return "Please enter a valid number";
             }
             else if (rExp.test(answer) != true) {
-                return "PIN e1";
+                return "Incorrect PIN";
             }
             else if (answer != userPin) {
-                return "PIN e2";
+                return "Incorrect PIN";
             }
             return true;
         }
