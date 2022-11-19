@@ -49,7 +49,7 @@ inquirer
         if (answers.q3 === "John Smith") {
             correctAnswers++;
         }
-        if (answers.q4 === "1943") {
+        if (answers.q4 === "1945") {
             correctAnswers++;
         }
         if (answers.q5 === "Russia") {
