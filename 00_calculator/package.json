@@ -1,5 +1,5 @@
 {
-  "name": "calculator_ak",
+  "name": "simple-calculator_ak",
   "type": "module",
   "version": "1.0.0",
   "main": "index.mjs",
@@ -14,7 +14,7 @@
     "@types/inquirer": "^9.0.2"
   },
   "bin": {
-    "calculator": "./bin/index.mjs"
+    "simple-calculator": "./bin/index.mjs"
   },
   "scripts": {
     "start": "node ./bin/index.mjs",
