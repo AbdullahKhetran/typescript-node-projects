@@ -35,11 +35,12 @@ function logIn() {
                 name: nameInput,
                 id: idInput,
             };
+            taskStage();
             return;
         }
     }
     console.log("Incorrect name or id");
-    logIn();
+    menu();
 }
 function taskStage() {
     inquirer
@@ -64,7 +65,6 @@ function taskStage() {
                     if (userData[i].name == global.currentUser.name) {
                         userData[i].balance += 1000;
                         userData[i].courses.push(`${answers.course}`);
-                        console.log(userData[i]);
                     }
                 }
                 taskStage();
@@ -123,22 +123,23 @@ function taskStage() {
         }
     });
 }
-inquirer
-    .prompt([{
-        type: "list",
-        name: "entry",
-        message: "Login or Register?",
-        choices: ["Login", "Register"]
-    }])
-    .then((answers) => {
-    if (answers.entry == "Register") {
-        register();
-        console.log("Let's login now");
-        logIn();
-        taskStage();
-    }
-    else if (answers.entry == "Login") {
-        logIn();
-        taskStage();
-    }
-});
+function menu() {
+    inquirer
+        .prompt([{
+            type: "list",
+            name: "entry",
+            message: "Login or Register?",
+            choices: ["Login", "Register"]
+        }])
+        .then((answers) => {
+        if (answers.entry === "Register") {
+            register();
+            console.log("Let's login now");
+            logIn();
+        }
+        else if (answers.entry === "Login") {
+            logIn();
+        }
+    });
+}
+menu();

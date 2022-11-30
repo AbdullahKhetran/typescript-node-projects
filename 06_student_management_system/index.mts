@@ -62,6 +62,7 @@ function logIn() {
             }
             // console.log(global.currentUser.name);
             // console.log(global.currentUser.id);
+            taskStage()
             return
             // if return is reached below code will not run because return stops the function
             // console.log("This should not run because of return");
@@ -71,9 +72,9 @@ function logIn() {
     // error if username and password do not match. 
     // This should be outside:
     // if block: due to return keyword
-    // for loop: so it only prints one time
+    // for loop: so it only prints once
     console.log("Incorrect name or id");
-    logIn();
+    menu();
 }
 
 function taskStage() {
@@ -103,7 +104,7 @@ function taskStage() {
                                 userData[i].balance! += 1000;
                                 userData[i].courses!.push(`${answers.course}`);
                                 // record what courses has user enrolled so later they should not available
-                                console.log(userData[i]);
+                                // console.log(userData[i]);
 
                             }
                         }
@@ -173,23 +174,25 @@ function taskStage() {
             }
         })
 }
+function menu() {
+    inquirer
+        .prompt([{
+            type: "list",
+            name: "entry",
+            message: "Login or Register?",
+            choices: ["Login", "Register"]
+        }])
+        .then((answers) => {
+            if (answers.entry === "Register") {
+                register();
+                console.log("Let's login now");
+                logIn();
+            } else if (answers.entry === "Login") {
+                logIn();
+                // taskStage();
+            }
+        })
+}
+menu()
 
-inquirer
-    .prompt([{
-        type: "list",
-        name: "entry",
-        message: "Login or Register?",
-        choices: ["Login", "Register"]
-    }])
-    .then((answers) => {
-        if (answers.entry == "Register") {
-            register();
-            console.log("Let's login now");
-            logIn();
-            taskStage();
-        } else if (answers.entry == "Login") {
-            logIn();
-            taskStage();
-        }
-    })
 // record what courses has user enrolled so later they should not be available
