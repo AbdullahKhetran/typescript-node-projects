@@ -22,7 +22,7 @@ let questions = [
     {
         type: "list",
         name: "personality",
-        message: "Are you and introvert or extrovert?",
+        message: "Are you an introvert or extrovert?",
         choices: ["Introvert", "Extrovert"]
     }
 ]
