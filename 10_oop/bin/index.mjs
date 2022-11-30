@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 import inquirer from 'inquirer';

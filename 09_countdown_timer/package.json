@@ -1,14 +1,10 @@
 {
-  "name": "09_countdown_timer",
+  "name": "countdown-timer_ak",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple countdown timer tool",
   "main": "index.mjs",
-  "scripts": {
-    "start": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
+  "author": "Abdullah Khetran",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.11.7",
@@ -18,5 +14,12 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.2"
+  },
+  "bin": {
+    "countdown-timer": "./bin/index.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

@@ -1,15 +1,11 @@
 {
-  "name": "06_student_management_system",
+  "name": "student-management-system_ak",
   "version": "1.0.0",
-  "description": "",
   "main": "index.mjs",
-  "scripts": {
-    "start": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
+  "author": "Abdullah Khetran",
   "license": "ISC",
+  "description": "Student management system tool",
   "dependencies": {
     "@types/node": "^18.11.7",
     "@types/prompt-sync": "^4.2.0",
@@ -18,5 +14,12 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.2"
+  },
+  "bin": {
+    "student-management-system": "./bin/index.mjs"
+  },
+  "scripts": {
+    "start": "node ./bin/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

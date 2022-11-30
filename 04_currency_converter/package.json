@@ -1,20 +1,23 @@
 {
-  "dependencies": {
-    "inquirer": "^9.1.4"
-  },
-  "name": "04_currency_converter",
+  "name": "currency-converter_ak",
   "type": "module",
   "version": "1.0.0",
   "main": "index.mjs",
+  "keywords": [],
+  "author": "Abdllah Khetran",
+  "license": "ISC",
+  "description": "Currency converter tool",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
   "devDependencies": {
     "@types/inquirer": "^9.0.2"
   },
-  "scripts": {
-    "start": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "currency-converter": "./bin/index.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "scripts": {
+    "start": "node ./bin/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from 'inquirer';
 const cr1 = "PKR (Pakistani Rupee)";
 const cr2 = "USD (United States Dollar)";

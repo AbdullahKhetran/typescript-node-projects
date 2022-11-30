@@ -1,20 +1,23 @@
 {
-  "dependencies": {
-    "inquirer": "^9.1.4"
-  },
-  "name": "05_word_counter",
+  "name": "word-counter_ak",
   "type": "module",
   "version": "1.0.0",
   "main": "index.mjs",
+  "keywords": [],
+  "author": "Abdullah Khetran",
+  "license": "ISC",
+  "description": "A simple character and word counter tool.",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
   "devDependencies": {
     "@types/inquirer": "^9.0.2"
   },
-  "scripts": {
-    "start": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "word-counter": "./bin/index.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "scripts": {
+    "start": "node ./bin/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

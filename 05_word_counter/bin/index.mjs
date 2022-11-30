@@ -1,16 +1,13 @@
-"use strict";
-exports.__esModule = true;
-var inquirer_1 = require("inquirer");
-// using regex to know number of words
+#! /usr/bin/env node
+import inquirer from 'inquirer';
 function wordCount(text) {
     return text.split(/\S+/).length - 1;
 }
 ;
-// remove whitespaces to count characters
 function charCount(text) {
     return text.trim().length;
 }
-inquirer_1["default"]
+inquirer
     .prompt([
     {
         type: "list",
@@ -21,10 +18,10 @@ inquirer_1["default"]
     {
         type: "input",
         name: "para",
-        message: "Type the paragraph to perform selected operation"
+        message: "Type the paragraph to perform selected operation",
     },
 ])
-    .then(function (answers) {
+    .then((answers) => {
     if (answers.choice == "Count characters") {
         console.log(charCount(answers.para));
     }

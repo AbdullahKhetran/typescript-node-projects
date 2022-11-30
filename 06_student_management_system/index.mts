@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 
@@ -16,8 +17,7 @@ let userData: [
 ] = [
         {
             name: "admin",
-            id: 1234,
-            // change id to 123456
+            id: 123456,
             balance: 0,
             courses: [],
         }

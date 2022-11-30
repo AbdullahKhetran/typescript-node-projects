@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import promptSync from "prompt-sync";
 const prompt = promptSync();
 import inquirer from 'inquirer';
@@ -44,7 +45,7 @@ inquirer
     if (answers.q3 === "John Smith") {
         correctAnswers++;
     }
-    if (answers.q4 === "1943") {
+    if (answers.q4 === "1945") {
         correctAnswers++;
     }
     if (answers.q5 === "Russia") {

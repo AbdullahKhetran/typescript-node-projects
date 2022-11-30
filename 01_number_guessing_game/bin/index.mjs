@@ -1,9 +1,9 @@
+#! /usr/bin/env node
 import inquirer from 'inquirer';
 let num = Math.random();
 num = num * 10;
 num += 1;
 num = Math.floor(num);
-console.log(num);
 inquirer
     .prompt([
     {

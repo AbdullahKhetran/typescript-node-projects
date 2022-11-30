@@ -1,20 +1,23 @@
 {
-  "dependencies": {
-    "inquirer": "^9.1.4"
-  },
-  "name": "02_atm",
+  "name": "atm_ak",
   "type": "module",
   "version": "1.0.0",
   "main": "index.mjs",
+  "keywords": [],
+  "author": "Abdullah Khetran",
+  "license": "ISC",
+  "description": "ATM login tool where user have to enter correct ID and PIN",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  },
   "devDependencies": {
     "@types/inquirer": "^9.0.2"
   },
-  "scripts": {
-    "start": "node index.mjs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "amt": "./bin/index.mjs"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "scripts": {
+    "start": "node ./bin/index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
