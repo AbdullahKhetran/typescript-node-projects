@@ -4,7 +4,7 @@ Note: node_modules folders are not included. Run "npm install" in the right dire
 
 ## All of these projects are also uploaded as npm projects and can be run locally using npx command
 00. `npx simple-calculator_ak`
-01. `npx number-guessing-game_ak`
+01. `npx number-guessing-game_ak@1.0.13`
 02. `npx atm_ak`
 03. `npx to-do-list_ak`
 04. `npx currency-converter_ak`
