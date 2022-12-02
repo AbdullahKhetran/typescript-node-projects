@@ -1,7 +1,7 @@
 {
   "name": "number-guessing-game_ak",
   "type": "module",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "index.mjs",
   "keywords": [],
   "author": "Abdullah Khetran",
